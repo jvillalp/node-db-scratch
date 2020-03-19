@@ -6,7 +6,7 @@
     a. `git remote -v`
     b. `git remote add origin <URL>`
     c. `git remote -v`
-    d. `knex init`
+    d. `knex init` #1
 6. add depencencies
     a. `npm i -D nodemon`
     b. `npm i express knex sqlite3 helmet morgan cors --save`
@@ -17,4 +17,18 @@
 8. build `index.js and server.js`
 9. confirm morgan is working on console.log and helmet is working in http client (headers)
 10. can confirm API `is working`
-11. Build a router
+11. Build server and character-router
+
+#1
+``` development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './database/charactersDb.sqlite3'
+    },
+    migration: {
+      directory: '/database/migrations'
+    },
+    seeds: {
+      directory: '/database/seeds'
+    }
+  },```
