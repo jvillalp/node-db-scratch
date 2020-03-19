@@ -18,6 +18,9 @@
 9. confirm morgan is working on console.log and helmet is working in http client (headers)
 10. can confirm API `is working`
 11. Build server and character-router
+12. build `dbConfig.js`
+13. `touch .env`
+14. `NullAsDefault` to knexfile.js
 
 #1
 ``` development: {

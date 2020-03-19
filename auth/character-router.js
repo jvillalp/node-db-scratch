@@ -1,10 +1,14 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const Characters =  require('./character-model.js')
+const Characters = require("./character-model.js");
 
-router.get('/', (req, res) => {
-    res.status(200).json({message: `this is working from the router`})    
-    //Characters.find()
-})
-module.exports = router
-
+router.get("/", (req, res) => {
+  Characters.find()
+    .then(character => {
+        res.status(200).json(character)
+    })
+    .catch(err => {
+        res.status(500).json({ errormessage: `${err}`})
+    });
+});
+module.exports = router;
