@@ -14,9 +14,10 @@ server.use(cors())
 server.get('/', (req, res) => {
     res.status(200).json({
         message: 'this is working!'
+        
     })
 })
-// server.use('/api/characters', characterRouter)
+server.use('/api/characters', characterRouter)
 
 
 
